@@ -73,30 +73,29 @@ Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
 understand how you can continue to add features to this application.
 
 ## Database schema
-CREATEBASE moneytracker;
+CREATE DATABASE moneytracker;
 
-CREATE TABLE user(
-   Id SERIAL PRIMARY KEY,
-   username           CHAR(50) NOT NULL,
-   password           CHAR(50) NOT,
+CREATE TABLE "user"(
+  id SERIAL PRIMARY KEY,
+   username VARCHAR(50) NOT NULL,
+   password CHAR(50) NOT
 );
 
 CREATE TABLE wallets(
    walletId SERIAL PRIMARY KEY,
-   walletName           VARCHAR(150) NOT NULL,
-   walletTotalInitialAmount INT   NOT NULL,
-   walletDescription           VARCHAR(150) NOT NULL,
-   overallWalletsBalance      INT NOT NULL,
-   individualWalletBalance    INT NOT NULL,
+   walletName VARCHAR(150) NOT NULL,
+   walletTotalInitialAmount INT NOT NULL,
+   walletDescription VARCHAR(150) NOT NULL,
+   overallWalletsBalance INT NOT NULL,
+   individualWalletBalance INT NOT NULL
 );
 
 CREATE TABLE WalletsTransaction(
-   transactionId  SERIAL PRIMARY KEY,
-   transaction Title           VARCHAR(150) NOT NULL,
-   transactionDescription   VARCHAR(150) NOT NULL,
-   walletAdditionalIncome           INT NOT NULL,
-   TransactionAmount      INT NOT NULL,
-   walletId    SERIAL PRIMARY KEY,
+   transactionId SERIAL PRIMARY KEY,
+   transactionTitle VARCHAR ( 150 ) NOT NULL,
+   transactionDescription VARCHAR ( 150 ) NOT NULL,
+   walletAdditionalIncome INT NOT NULL,
+   TransactionAmount INT NOT NULL,
 );
 
 
